@@ -53,14 +53,6 @@ public class Trabalho {
 	private JTable table_registros;
 	final ArrayList<Hospedes> addlistafuncionario = new ArrayList<Hospedes>(); 
 	//adiciona um array da classe Funcionario para ser usado mais abaixo.
-	int ID = 1;
-		
-	public int proximoCodigo() {
-	
-	return ID++ ;
-}
-	
-	private int geradorCodigo = proximoCodigo();
 	
 
 	/**
@@ -277,7 +269,7 @@ public class Trabalho {
 
 				} else {
 					label_img.setIcon(new ImageIcon(Trabalho.class.getResource("/javax/swing/plaf/metal/icons/Question.gif")));
-					JOptionPane.showMessageDialog(null, "Cancelado pelo usu�rio.");
+					JOptionPane.showMessageDialog(null, "Cancelado pelo usuário.");
 				}
 
 			}
@@ -365,7 +357,7 @@ public class Trabalho {
 						table_registros.getColumnModel().getColumn(0).setPreferredWidth(40);
 						table_registros.setRowHeight(90);
 						btn_del.setEnabled(false);
-						//chama o metodo para montar o modelo da tabela, com o parametro de 1 para mostrar a msg de remoção de cadastro.
+						//chama o metodo para montar o modelo da tabela, com o parametro de 1 para mostrar a msg de remoÃ§Ã£o de cadastro.
 						montatabela(1);
 							
 					}
@@ -391,9 +383,6 @@ public class Trabalho {
 				comboBox_pagamento.setEnabled(true);
 				formattedTextField_dateNascimento.setEnabled(true);
 				formattedTextField_dateRegistro.setEnabled(true);
-				formattedTextField_horaEntrada.setEnabled(true);
-				formattedTextField_horaSaida.setEnabled(true);
-				formattedTextField_codigo.setText(Integer.toString(geradorCodigo));
 				btn_del.setEnabled(false);
 
 			}
@@ -497,7 +486,7 @@ public class Trabalho {
 					}
 				});
 				table_registros.setModel(new DefaultTableModel(
-					new Object[][] {}, new String[] {"C�digo", "Nome", "Email", "Telefone","N� Quarto","Ceck-in", "Imagem"}) {
+					new Object[][] {}, new String[] {"Código", "Nome", "Email", "Telefone","Nº Quarto","Ceck-in", "Imagem"}) {
 					Class[] columnTypes = new Class[] {
 						int.class, String.class, String.class, String.class, Object.class, String.class, Object.class
 					};
@@ -546,7 +535,7 @@ public class Trabalho {
 		}
 		//cria o modelo para preencher a tabela com a matriz de dados criada acima.				
 		table_registros.setModel(new DefaultTableModel(
-				matrizdados, new String[] { "C�digo", "Nome", "Email", "Telefone","N� Quarto","Ceck-in", "Imagem" }) {
+				matrizdados, new String[] { "Código", "Nome", "Email", "Telefone","Nº Quarto","Ceck-in", "Imagem" }) {
 			Class[] columnTypes = new Class[] {
 					int.class, String.class, String.class, String.class, Object.class, String.class, ImageIcon.class
 				};
